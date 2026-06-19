@@ -606,7 +606,7 @@
 	<ThingDef ParentName="VQEA_AncientsBuildingBase">
 		<defName>VQEA_AncientStorageHeater</defName>
 		<label>ancient storage heater</label>
-		<description>A compact electric heater from the ancient labs. It warms the air to a comfortable level when powered.</description>
+		<description>A compact electric heater from the ancient labs. It warms the air to a comfortable level.</description>
 		<size>(1,1)</size>
 		<fillPercent>0.4</fillPercent>
 		<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
