@@ -575,11 +575,11 @@ namespace VanillaQuestsExpandedAncients
             return chances;
         }
 
-        private int GetGeneticComplexity(Pawn pawn)
+        public int GetGeneticComplexity(Pawn pawn)
         {
             if (pawn.genes != null)
             {
-                return pawn.genes.GenesListForReading.Count;
+                return pawn.genes.GenesListForReading.Sum(g => g.def.biostatCpx);
             }
             return 0;
         }
@@ -739,15 +739,6 @@ namespace VanillaQuestsExpandedAncients
                 }
             }
             return Mathf.Max(6000, baseTicks);
-        }
-
-        public int GetGeneticComplexityForUI()
-        {
-            if (Occupant != null && Occupant.genes != null)
-            {
-                return Occupant.genes.GenesListForReading.Count;
-            }
-            return 0;
         }
 
         public float GetOutcomeChance(ArchiteInjectionOutcomeDef outcomeDef)

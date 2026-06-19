@@ -70,7 +70,7 @@ namespace VanillaQuestsExpandedAncients
             listing.Label("VQEA_InfusionComaDuration".Translate() + ": " + "VQEA_Days".Translate(Mathf.RoundToInt(archogenInjector.GetExpectedComaDuration() / (float)GenDate.TicksPerDay)));
             listing.Gap(SectionSpacing);
 
-            listing.Label("VQEA_PawnGeneticComplexity".Translate(archogenInjector.Occupant.Name.ToStringFull) + ": " + archogenInjector.GetGeneticComplexityForUI());
+            listing.Label("VQEA_PawnGeneticComplexity".Translate(archogenInjector.Occupant.Name.ToStringFull) + ": " + archogenInjector.GetGeneticComplexity(archogenInjector.Occupant));
             if (archogenInjector.Occupant.apparel.WornApparel.Any(x => x.def == InternalDefOf.VQEA_Apparel_PatientGown))
             {
                 listing.Label("VQEA_PatientGownBonus".Translate().Colorize(ColorLibrary.Green));
